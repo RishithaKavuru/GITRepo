@@ -5,4 +5,4 @@ services:
     ports:
       - "8226:5000"
   redis:
-    image: "redis:alpine"
+    image: "ngnix:alpine"
