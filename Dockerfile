@@ -1,5 +1,7 @@
-FROM java:8  
-COPY . /var/www/java  
-WORKDIR /var/www/java  
-RUN javac Hello.java  
-CMD ["java", "Hello"]  
+FROM ngnix-alpine
+Run mkdir/usr
+COPY . /usr/share/ngnix.html
+WORKDIR /usr  
+RUN npm install
+EXPOSE 8080
+CMD ["npm", "start"]  
